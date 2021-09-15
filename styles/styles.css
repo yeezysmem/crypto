@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body {
   background-color: #222229;
   color: #fff;
@@ -5,9 +6,10 @@ body {
 }
 
 .email {
+  z-index: 10000;
   position: fixed;
-  bottom: 15px;
-  right: 15px;
+  bottom: 45px;
+  right: 45px;
   height: 100px;
   width: 100px;
   background-color: #8d5cf6;
@@ -141,12 +143,13 @@ body {
 }
 
 .review-card {
+  margin: 0 10px;
   background-color: #2d2d34;
   border-radius: 20px;
 }
 
 .review-card__image {
-  padding-top: 25px;
+  padding-top: 15px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -160,7 +163,7 @@ body {
 
 .review-card__content {
   text-align: center;
-  padding: 30px 70px;
+  padding: 10px 70px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -178,13 +181,13 @@ body {
 
 .review-card__content p {
   font-weight: 300;
+  font-size: 13px;
 }
 
 .review-card__content span {
-  padding-top: 30px;
+  padding-top: 20px;
   font-size: 14px;
-  font-weight: bold;
-  font-size: 14px;
+  font-weight: 600;
 }
 
 .sponsors h4 {
@@ -256,5 +259,42 @@ footer p {
   line-height: 16px;
   color: #8d5cf6;
   font-weight: 300;
+}
+
+.cookie_notice {
+  display: none;
+  position: fixed;
+  z-index: 9999999;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-size: 15px;
+  font-family: Verdana, sans-serif;
+  color: #FFF;
+  background: #222634;
+  padding: 20px 20px;
+  border-top: 2px solid #8D5CF6;
+}
+
+/* Оформление кнопок */
+.cookie_btn {
+  display: inline-block;
+  margin: 20px 6px 4px 6px;
+  border-radius: 20px;
+  text-decoration: none;
+  position: relative;
+  font-size: 13px;
+  padding: 4px 12px;
+  color: #8D5CF6;
+  font-weight: bold;
+  text-transform: uppercase;
+  background: transparent;
+  border: 2px solid #8D5CF6;
+}
+
+.cookie_btn:hover {
+  color: #FFF;
+  background-color: #8D5CF6;
 }
 /*# sourceMappingURL=styles.css.map */

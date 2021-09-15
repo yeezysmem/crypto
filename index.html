@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>new</title>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -18,6 +21,8 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
+
+    
     <!-- BOOTSTRAP -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
@@ -25,10 +30,20 @@
       integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
       crossorigin="anonymous"
     />
+
     <!-- MAIN-STYLES -->
     <link rel="stylesheet" href="styles/styles.css" />
   </head>
   <body>
+    <div class="cookie_notice">
+      This site uses cookies to store data. By continuing to use the site, you
+      consent to the work with these files.
+      <div>
+        <a class="cookie_btn" id="cookie_close" href="#close"
+          >Accept and close</a
+        >
+      </div>
+    </div>
     <div class="email">
       <div class="email-image">
         <img src="images/email.svg" alt="" />
@@ -60,21 +75,29 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-7 offset-1">
+          <div class="col-7 offset-2">
             <div class="exchange">
-              <p style="color:#fff;border-bottom: 1px dashed #3AE388; font-weight: normal;">Number of people exchanged</p>
-                <p>22 807</p>
-                <p>34 208</p>
-                <p>17 879</p>
-                <p>24 106</p>
-                <p>21 455</p>
-                <p>38 756</p>
-                <p>41 388</p>
+              <p
+                style="
+                  color: #fff;
+                  border-bottom: 1px dashed #3ae388;
+                  font-weight: normal;
+                "
+              >
+                Number of people exchanged
+              </p>
+              <p>22 807</p>
+              <p>34 208</p>
+              <p>17 879</p>
+              <p>24 106</p>
+              <p>21 455</p>
+              <p>38 756</p>
+              <p>41 388</p>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-6 offset-2">
+          <div class="col-6 offset-3">
             <div class="stat1"></div>
             <img src="images/statistics.svg" alt="" />
             <div
@@ -88,7 +111,15 @@
                 font-weight: 300;
               "
             >
-              <p style="color:#fff;border-bottom: 1px dashed #3AE388; font-weight: normal;">Date</p>
+              <p
+                style="
+                  color: #fff;
+                  border-bottom: 1px dashed #3ae388;
+                  font-weight: normal;
+                "
+              >
+                Date
+              </p>
               <p id="date"></p>
               <p id="date1"></p>
               <p id="date2"></p>
@@ -108,9 +139,8 @@
       </div>
     </section>
     <section class="review">
-      <div class="container">
-        <div class="row">
-          <div class="col-3">
+      <div class="container"> 
+        <div class=" slider-review">
             <div class="review-card">
               <div class="review-card__image">
                 <img src="images/card1.png" alt="" />
@@ -124,11 +154,9 @@
                 <span>Designer</span>
               </div>
             </div>
-          </div>
-          <div class="col-3">
             <div class="review-card">
               <div class="review-card__image">
-                <img src="images/card2.png" alt="" />
+                <img src="images/card1.png" alt="" />
               </div>
               <div class="review-card__content">
                 <p>
@@ -139,11 +167,9 @@
                 <span>Designer</span>
               </div>
             </div>
-          </div>
-          <div class="col-3">
             <div class="review-card">
               <div class="review-card__image">
-                <img src="images/card3.png" alt="" />
+                <img src="images/card1.png" alt="" />
               </div>
               <div class="review-card__content">
                 <p>
@@ -154,11 +180,9 @@
                 <span>Designer</span>
               </div>
             </div>
-          </div>
-          <div class="col-3">
             <div class="review-card">
               <div class="review-card__image">
-                <img src="images/card4.png" alt="" />
+                <img src="images/card1.png" alt="" />
               </div>
               <div class="review-card__content">
                 <p>
@@ -169,7 +193,84 @@
                 <span>Designer</span>
               </div>
             </div>
-          </div>
+            <div class="review-card">
+              <div class="review-card__image">
+                <img src="images/card1.png" alt="" />
+              </div>
+              <div class="review-card__content">
+                <p>
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year.
+                </p>
+                <img src="images/stat.svg" alt="" />
+                <span>Designer</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-card__image">
+                <img src="images/card1.png" alt="" />
+              </div>
+              <div class="review-card__content">
+                <p>
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year.
+                </p>
+                <img src="images/stat.svg" alt="" />
+                <span>Designer</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-card__image">
+                <img src="images/card1.png" alt="" />
+              </div>
+              <div class="review-card__content">
+                <p>
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year.
+                </p>
+                <img src="images/stat.svg" alt="" />
+                <span>Designer</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-card__image">
+                <img src="images/card1.png" alt="" />
+              </div>
+              <div class="review-card__content">
+                <p>
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year.
+                </p>
+                <img src="images/stat.svg" alt="" />
+                <span>Designer</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-card__image">
+                <img src="images/card1.png" alt="" />
+              </div>
+              <div class="review-card__content">
+                <p>
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year.
+                </p>
+                <img src="images/stat.svg" alt="" />
+                <span>Designer</span>
+              </div>
+            </div>
+            <div class="review-card">
+              <div class="review-card__image">
+                <img src="images/card1.png" alt="" />
+              </div>
+              <div class="review-card__content">
+                <p>
+                  Slate helps you see how many more days you need to work to
+                  reach your financial goal for the month and year.
+                </p>
+                <img src="images/stat.svg" alt="" />
+                <span>Designer</span>
+              </div>
+            </div>
         </div>
       </div>
     </section>
@@ -281,5 +382,11 @@
       document.getElementById("date6").innerHTML =
         "<b>" + currday6 + "/" + month + "</b>";
     </script>
+    <script src="index.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="jquery.ihavecookies.js"></script>
+    
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+
   </body>
 </html>

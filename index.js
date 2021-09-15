@@ -3,22 +3,40 @@
 //     slidesToScroll: 1,
 //     autoplay: true,
 //     autoplaySpeed: 2000,
-//   });                  
+//   });     
 
-  var objToday = new Date(),
-	weekday = new Array('Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'),
-	dayOfWeek = weekday[objToday.getDay()],
-	domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
-	dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
-	months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
-	curMonth = months[objToday.getMonth()],
-	curYear = objToday.getFullYear(),
-	curHour = objToday.getHours() > 12 ? objToday.getHours() - 12 : (objToday.getHours() < 10 ? "0" + objToday.getHours() : objToday.getHours()),
-	curMinute = objToday.getMinutes() < 10 ? "0" + objToday.getMinutes() : objToday.getMinutes(),
-	curSeconds = objToday.getSeconds() < 10 ? "0" + objToday.getSeconds() : objToday.getSeconds(),
-	curMeridiem = objToday.getHours() > 12 ? "PM" : "AM";
-var today = curHour + ":" + curMinute + "." + curSeconds + curMeridiem + " " + dayOfWeek + " " + dayOfMonth + " of " + curMonth + ", " + curYear;
+ 
 
-document.getElementById('test')[0].textContent = today;
+         
+
+$(document).ready(function(){
+  $('.slider-review').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 1
+  });
+});
 
 
+// функция возвращает cookie с именем name, если есть, если нет, то undefined    
+function getCookie(name) {
+  let matches = document.cookie.match(new RegExp(
+  "(?:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
+  ));
+  return matches ? decodeURIComponent(matches[1]) : undefined;
+}
+let cookiecook = getCookie("cookiecook"),
+cookiewin = document.getElementsByClassName('cookie_notice')[0];    
+// проверяем, есть ли у нас cookie, с которой мы не показываем окно и если нет, запускаем показ
+if (cookiecook != "no") {
+  // показываем    
+  cookiewin.style.display="block"; 
+  // закрываем по клику
+  document.getElementById("cookie_close").addEventListener("click", function(){
+      cookiewin.style.display="none";    
+      // записываем cookie на 1 день, с которой мы не показываем окно
+      let date = new Date;
+      date.setDate(date.getDate() + 1);    
+      document.cookie = "cookiecook=no; path=/; expires=" + date.toUTCString();               
+  });
+}
