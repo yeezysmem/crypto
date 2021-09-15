@@ -1,0 +1,202 @@
+body {
+  background-color: #222229;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+.email {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  height: 100px;
+  width: 100px;
+  background-color: #8d5cf6;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &:hover {
+    width: 400px;
+    &::before {
+      content: "yeee@gmail.com";
+      font-size: 20px;
+    }
+    img {
+      display: none;
+    }
+  }
+}
+
+.main {
+  .vector {
+    position: absolute;
+    top: 40px;
+    left: 80px;
+  }
+  margin-top: 90px;
+  &-image {
+    background-color: #2c2c33;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 20px solid #8d5cf6;
+    position: relative;
+    img {
+      position: relative;
+    }
+  }
+  &-content {
+    h1 {
+      font-weight: bold;
+      font-size: 58px;
+      line-height: 80px;
+    }
+    p {
+      font-size: 20px;
+      line-height: 30px;
+      font-weight: 300;
+    }
+  }
+}
+
+.statistic {
+  .exchange {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 0px;
+    margin-top: 10px;
+    font-size: 11px;
+    color: #868b93;
+    font-weight: 300;
+
+  }
+  h2 {
+    margin-bottom: 70px;
+  }
+  &-cap {
+    margin-bottom: 10px;
+  }
+  margin: 100px;
+
+  .info {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    span {
+      padding-left: 10px;
+      font-weight: 300;
+    }
+    &-flex {
+      display: flex;
+    }
+
+    .circle1 {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: #8d5cf6;
+    }
+    .circle2 {
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: #3ae388;
+    }
+  }
+}
+
+.review {
+  &-card {
+    background-color: hsl(240, 7%, 19%);
+    border-radius: 20px;
+    &__image {
+      padding-top: 25px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    &__content {
+      text-align: center;
+      padding: 30px 70px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      p {
+        font-weight: 300;
+      }
+      span {
+        padding-top: 30px;
+        font-size: 14px;
+        font-weight: bold;
+        font-size: 14px;
+      }
+    }
+  }
+}
+
+.sponsors {
+  h4 {
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 50px;
+    margin: 120px;
+  }
+  .sponsors-btn {
+    &:hover {
+      opacity: 1;
+    }
+    opacity: 0.9;
+    margin-left: 50px;
+    margin-top: 20px;
+    background-color: #8d5cf6;
+    border: none;
+    border-radius: 38px;
+    padding: 12px 60px;
+    span {
+      color: #fff;
+      font-weight: 600;
+    }
+  }
+  &-item {
+    width: 270px;
+    background-color: #2c2c33;
+    border-radius: 20px;
+    &__image {
+      border-bottom: 24px solid #5c5c5c;
+      border-radius: 0 0 20px 20px;
+    }
+  }
+}
+
+.founds {
+  margin: 100px;
+  h4 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: bold;
+  }
+  p {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 300;
+    margin-bottom: 120px;
+  }
+}
+
+footer {
+  margin-top: 200px;
+  article {
+    font-size: 13px;
+    line-height: 16px;
+    font-weight: 300;
+  }
+  p {
+    font-size: 13px;
+    line-height: 16px;
+    color: #8d5cf6;
+    font-weight: 300;
+  }
+}
