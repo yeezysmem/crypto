@@ -1,5 +1,5 @@
 # Crypto landing page
-### Designed and Developed by Me(yeezysmem) 
+### Designed and developed by me(yeezysmem) 
 ## Used:
 ![Html5](https://img.shields.io/badge/-Html5-41AB58?style=for-the-badge&logo=html5&logoColor=ffffff)
 ![CSS3](https://img.shields.io/badge/-CSS3-41AB58?style=for-the-badge&logo=css3&logoColor=ffffff)
